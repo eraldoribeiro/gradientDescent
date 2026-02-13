@@ -1,7 +1,5 @@
 # The gradient-descent algorithm
 
-
-##Review of derivatives of functions
 #### Derivative of a scalar function of a single scalar variable
 
 Before we present the gradient-descent algorithm, we will briefly review the concept of derivative of a function. Let $f$ be a scalar function of a single variable $x$. The derivative of the function w.r.t. $x$ is: 
@@ -38,7 +36,7 @@ for a small $\Delta x$. Figure 2 shows the approximate derivative of the functio
 
 
 
-####Calculating the value of functions at nearby points
+#### Calculating the value of functions at nearby points
 
 The derivative of a function calculated at a certain point can be seen as a linear approximation of the function at that point. We can also use derivatives to calculate the value of a function at nearby points. Given the value of a function at a point, $f(x)$, and its derivative, $df/dx$, we can estimate the value of the function at a point near $x$, i.e.: 
 $$
@@ -52,7 +50,7 @@ $$
 $$
 <img src="figs/derivative_nearby_point.png" alt="derivative_nearby_point" style="zoom:30%;" />
 
-**Figure 3**: Derivatives allow us to calculate the value of a function at nearby points. Given the value of a function at a point, $f(x)$, and its derivative, $df/dx$, we can estimate the value of the function at a point near $x$ 
+**Figure 3**: Using derivatives to approximate the value of a function at nearby points. Given the value of a function at a point, $f(x)$, and its derivative, $df/dx$, we can estimate $f(x+\Delta x)$, which is the value of the function at a point near $x$. 
 
 ## The gradient-descent algorithm
 
@@ -69,7 +67,7 @@ $$
 $$
 For each step, we choose a value of $\Delta x$ that brings us closer to our goal. 
 
-####Determining a suitable step $\Delta x$ 
+#### Determining a suitable step $\Delta x$ 
 
 The question now is which step (i.e., magnitude and direction) should we take that will make us reach our goal? Because we plan to follow the slope of the function (i.e., its linear approximation given by the derivative), we can use the local approximation of the function value at nearby points, i.e.: 
 $$
@@ -128,3 +126,4 @@ where $s$ is the slope of the function at $x$.
 The pseudo-code steps of the gradient-descent algorithm is listed in Algorithm 1. 
 
 <img src="figs/grad_descent_algorithm.png" alt="grad_descent_algorithm" style="zoom: 60%;" />
+
